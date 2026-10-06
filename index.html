@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Hanna ❤️</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #ffdce7, #fff5f8, #ffd1df);
+            color: #5c3541;
+            overflow-x: hidden;
+        }
+
+        /* Floating hearts */
+
+        .heart {
+            position: fixed;
+            bottom: -40px;
+            font-size: 25px;
+            color: #e85b83;
+            pointer-events: none;
+            animation: floatUp 8s linear infinite;
+            z-index: 0;
+        }
+
+        .heart:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 40%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 65%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(5) {
+            left: 85%;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-115vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main card */
+
+        .container {
+            position: relative;
+            z-index: 1;
+
+            width: 92%;
+            max-width: 720px;
+
+            margin: 40px auto;
+            padding: 35px 25px;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 45px rgba(150, 60, 90, 0.18);
+
+            text-align: center;
+        }
+
+        .small-title {
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: #b85b76;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #cc456d;
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #c94268;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: #efa0b6;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        /* Buttons */
+
+        button {
+            border: none;
+            background: #d94f76;
+            color: white;
+
+            padding: 15px 25px;
+
+            border-radius: 50px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-top: 20px;
+
+            box-shadow: 0 7px 18px rgba(190, 55, 90, 0.25);
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #c43d64;
+            transform: scale(1.05);
+        }
+
+        /* Message */
+
+        #message {
+            display: none;
+            animation: appear 1s ease;
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Photos */
+
+        .photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            box-shadow: 0 7px 20px rgba(130, 50, 75, 0.15);
+        }
+
+        .photo-text {
+            color: #a76b7c;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        /* Letter */
+
+        .letter {
+            text-align: left;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            margin-top: 25px;
+        }
+
+        .letter p {
+            margin-bottom: 20px;
+        }
+
+        /* Funny part */
+
+        .funny-box {
+            margin-top: 25px;
+
+            background: #fff0f4;
+
+            border-radius: 20px;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        .funny-box .emoji {
+            font-size: 38px;
+        }
+
+        /* Ending */
+
+        .ending {
+            margin-top: 30px;
+
+            padding: 25px 18px;
+
+            background: linear-gradient(
+                135deg,
+                #ffe5ed,
+                #fff4f7
+            );
+
+            border-radius: 22px;
+        }
+
+        .signature {
+            color: #cb416a;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+        }
+
+        /* Last surprise */
+
+        #lastMessage {
+            display: none;
+
+            margin-top: 25px;
+
+            animation: appear 1s ease;
+        }
+
+        .big-heart {
+            font-size: 65px;
+
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .footer {
+            margin-top: 30px;
+
+            font-size: 12px;
+
+            color: #b07b8b;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+                margin: 20px auto;
+                padding: 30px 18px;
+            }
+
+            h1 {
+                font-size: 31px;
+            }
+
+            .photos img {
+                height: 200px;
+            }
+
+            .letter {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Floating hearts -->
+
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+
+
+    <div class="container">
+
+
+        <!-- FIRST PAGE -->
+
+        <div id="intro">
+
+            <div class="small-title">
+                FOR THE GIRL I LOVE
+            </div>
+
+            <h1>
+                Happy 2nd Anniversary
+                <br>
+                Baby ILYSM ❤️
+            </h1>
+
+            <div class="divider"></div>
+
+            <p>
+                Two years with you, Hanna.
+            </p>
+
+            <p>
+                I made something small for you.
+                <br>
+                Open it when you're ready. ❤️
+            </p>
+
+            <button onclick="openMessage()">
+                Open my message 💌
+            </button>
+
+        </div>
+
+
+        <!-- SECOND PAGE -->
+
+        <div id="message">
+
+            <div class="small-title">
+                TWO YEARS OF US
+            </div>
+
+            <h1>
+                For You, Hanna ❤️
+            </h1>
+
+
+            <!-- PHOTOS -->
+
+            <div class="photos">
+
+                <img src="IMG_0344.jpeg"
+                     alt="Our memory">
+
+                <img src="IMG_0343.jpeg"
+                     alt="Our memory">
+
+            </div>
+
+            <div class="photo-text">
+                Just us. One of my favorite things. ❤️
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- LETTER -->
+
+            <div class="letter">
+
+                <p>
+                    Happy 2nd anniversary, baby! ❤️
+                </p>
+
+
+                <p>
+                    Grabe, two years na tayo. Ang bilis talaga ng
+                    panahon. Parang kailan lang, pero kapag naiisip
+                    ko lahat ng nangyari sa atin, ang dami na rin
+                    pala nating memories together.
+                </p>
+
+
+                <p>
+                    I just want to say thank you. Thank you for
+                    staying, for understanding me, for making me
+                    laugh, and for being there even on the days
+                    na hindi tayo okay.
+                </p>
+
+
+                <p>
+                    I know hindi naman perfect lahat ng days natin.
+                    May arguments, misunderstandings, tampuhan,
+                    and sometimes may moments na hindi tayo
+                    nagkakaintindihan. But even with those things,
+                    I still wouldn't trade what we have.
+                </p>
+
+
+                <p>
+                    I love the way we can be serious one minute
+                    and then completely stupid the next. Yung
+                    random conversations natin, yung tawanan,
+                    yung kulit natin, and especially yung mga
+                    wild jokes natin na parang kasal na tayo
+                    bukas. HAHAHAHA. 😂❤️
+                </p>
+
+
+                <p>
+                    Honestly, I love those little things about us.
+                    They might seem ordinary, but they're some of
+                    the things that make being with you special.
+                </p>
+
+
+                <p>
+                    Thank you for all the little things you do,
+                    even the things you probably don't realize
+                    I notice. I appreciate you more than I
+                    sometimes know how to say.
+                </p>
+
+
+                <p>
+                    After two years, you're still the person I
+                    want to talk to, laugh with, annoy, and make
+                    more memories with.
+                </p>
+
+
+                <p>
+                    I don't know exactly what the future will look
+                    like, but I hope you're still there. I want
+                    more dates, more pictures, more random
+                    conversations, more adventures, more laughs,
+                    and more ordinary days together.
+                </p>
+
+
+                <p>
+                    I know I won't always get everything right,
+                    but I promise that I'll keep trying. I'll keep
+                    learning, I'll keep growing, and I'll keep
+                    doing my best for us.
+                </p>
+
+
+                <p>
+                    I love you so much, Hanna. I'm really thankful
+                    that it's you. Out of all the people I could
+                    have met, I'm glad I met you.
+                </p>
+
+
+                <p>
+                    And if I could choose again, I'd still choose
+                    you.
+                </p>
+
+            </div>
+
+
+            <!-- FUNNY SECTION -->
+
+            <div class="funny-box">
+
+                <div class="emoji">
+                    💍😂❤️
+                </div>
+
+                <h2>
+                    Our very serious future...
+                </h2>
+
+                <p>
+                    More anniversaries.
+                    <br>
+                    More dates.
+                    <br>
+                    More memories.
+                    <br>
+                    More lambing.
+                    <br>
+                    More kulit.
+                    <br>
+                    And probably more wild jokes
+                    about us already being married. 😂
+                </p>
+
+            </div>
+
+
+            <!-- ENDING -->
+
+            <div class="ending">
+
+                <h2>
+                    Happy 2nd Anniversary, Baby ❤️
+                </h2>
+
+                <p>
+                    Here's to two years of us and hopefully
+                    many, many more.
+                </p>
+
+                <p>
+                    I hope we get to celebrate more anniversaries,
+                    more birthdays, more random days together,
+                    and all the little moments in between.
+                </p>
+
+                <p>
+                    I don't need everything to be perfect.
+                    I just want us to keep choosing each other,
+                    keep talking, keep laughing, and keep loving
+                    each other.
+                </p>
+
+                <div class="signature">
+                    I love you so much, Hanna. ❤️
+                </div>
+
+                <p>
+                    ILYSM, baby.
+                    <br>
+                    Always your Lhian. 🫶
+                </p>
+
+            </div>
+
+
+            <!-- FINAL BUTTON -->
+
+            <button onclick="showFinalMessage()">
+                One more thing... ❤️
+            </button>
+
+
+            <!-- FINAL SURPRISE -->
+
+            <div id="lastMessage">
+
+                <div class="big-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    It's still you, Hanna.
+                </h2>
+
+                <p>
+                    Today, tomorrow, on our next anniversary,
+                    and on all the normal days in between.
+                </p>
+
+                <p>
+                    I love you, baby.
+                    <br>
+                    Here's to us and all the days of love
+                    that are still waiting for us. ❤️
+                </p>
+
+                <p style="font-weight:bold;">
+                    Happy 2nd Anniversary. 🫶
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            Made with love by Lhian ❤️
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function openMessage() {
+
+            document.getElementById("intro").style.display = "none";
+
+            document.getElementById("message").style.display = "block";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function showFinalMessage() {
+
+            document.getElementById("lastMessage").style.display = "block";
+
+            document.getElementById("lastMessage").scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+
+    </script>
+
+
+</body>
