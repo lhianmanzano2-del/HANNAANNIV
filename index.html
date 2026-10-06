@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 2nd Anniversary Hanna ❤️</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f6, #ffd1e3);
+    color: #5a3042;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 24px;
+    animation: floatHeart 8s linear infinite;
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 45%;
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(5) {
+    left: 85%;
+    animation-delay: 3s;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 92%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 15px 60px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: clamp(38px, 8vw, 65px);
+    color: #d6336c;
+    margin-bottom: 15px;
+    animation: fadeDown 1.5s ease;
+}
+
+.intro p {
+    font-size: 21px;
+    margin-bottom: 30px;
+    animation: fadeUp 1.5s ease;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+    background: #d6336c;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 7px 18px rgba(214, 51, 108, 0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #b92b5c;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message {
+    display: none;
+    animation: fadeUp 1s ease;
+}
+
+.card {
+    background: rgba(255,255,255,0.88);
+    padding: 32px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(100, 30, 60, 0.15);
+    margin-bottom: 45px;
+}
+
+.card h2 {
+    color: #d6336c;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.memory-section {
+    margin-top: 50px;
+}
+
+.memory-section h2 {
+    font-size: 32px;
+    color: #d6336c;
+    margin-bottom: 10px;
+}
+
+.memory-subtitle {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 35px;
+}
+
+.polaroid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 850px;
+    margin: auto;
+    padding: 10px;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: photoAppear 0.8s ease both;
+}
+
+.polaroid:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    z-index: 5;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.polaroid p {
+    color: #444;
+    font-family: cursive;
+    font-size: 17px;
+    margin-top: 13px;
+}
+
+/* Photo animations */
+
+.polaroid:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.polaroid:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.polaroid:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.polaroid:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.polaroid:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.polaroid:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.polaroid:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+@keyframes photoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    margin-top: 55px;
+    background: #fff9fb;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(100, 30, 60, 0.15);
+}
+
+.letter h2 {
+    color: #d6336c;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   FUNNY SECTION
+========================= */
+
+.funny {
+    margin-top: 35px;
+    background: #ffe3ed;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.funny h2 {
+    color: #d6336c;
+    margin-bottom: 15px;
+}
+
+.funny p {
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   ENDING
+========================= */
+
+.ending {
+    margin-top: 55px;
+    padding: 40px 20px;
+}
+
+.ending h2 {
+    font-size: 35px;
+    color: #d6336c;
+    margin-bottom: 18px;
+}
+
+.ending p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   FINAL SURPRISE
+========================= */
+
+#finalMessage {
+    display: none;
+    margin-top: 30px;
+    animation: finalPop 1s ease;
+}
+
+#finalMessage h2 {
+    font-size: 40px;
+    color: #d6336c;
+    margin-bottom: 15px;
+}
+
+#finalMessage p {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+@keyframes finalPop {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   GENERAL ANIMATIONS
+========================= */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        padding: 20px 8px 50px;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .card,
+    .letter,
+    .funny {
+        padding: 25px 20px;
+    }
+
+    .card h2 {
+        font-size: 27px;
+    }
+
+    .polaroid-gallery {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 15px;
+    }
+
+    .polaroid img {
+        height: 300px;
+    }
+
+    .polaroid:nth-child(odd) {
+        transform: rotate(-2deg);
+    }
+
+    .polaroid:nth-child(even) {
+        transform: rotate(2deg);
+    }
+
+    .memory-section h2 {
+        font-size: 28px;
+    }
+
+    .ending h2 {
+        font-size: 30px;
+    }
+
+    #finalMessage h2 {
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- Floating hearts -->
+
+<div class="heart">❤️</div>
+<div class="heart">💕</div>
+<div class="heart">💗</div>
+<div class="heart">💖</div>
+<div class="heart">💘</div>
+
+
+<div class="container">
+
+    <!-- =====================
+         INTRO SCREEN
+    ====================== -->
+
+    <section class="intro">
+
+        <h1>
+            Happy 2nd Anniversary Baby ❤️
+        </h1>
+
+        <p>
+            ILYSM, Hanna. 🥹💕
+        </p>
+
+        <button onclick="openMessage()">
+            Open My Message 💌
+        </button>
+
+    </section>
+
+
+    <!-- =====================
+         MAIN CONTENT
+    ====================== -->
+
+    <section id="message">
+
+
+        <!-- MAIN MESSAGE -->
+
+        <div class="card">
+
+            <h2>
+                Happy 2nd Anniversary, Baby! ❤️
+            </h2>
+
+            <p>
+                Grabe, two years na tayo. 🥹❤️
+                Parang ang bilis ng panahon, pero kapag
+                iniisip ko lahat ng memories natin,
+                parang ang dami na rin nating pinagdaanan together.
+            </p>
+
+            <p>
+                Thank you for staying with me through everything.
+                Thank you sa pag-intindi sa akin, sa pagiging patient,
+                at sa lahat ng little things na ginagawa mo
+                na maybe simple lang para sa'yo pero malaking bagay
+                sa akin.
+            </p>
+
+            <p>
+                Hindi naman perfect ang relationship natin.
+                May arguments, misunderstandings, tampuhan,
+                at mga araw na hindi tayo okay.
+                Pero kahit ganon, I'm still thankful na ikaw
+                yung kasama ko sa lahat ng iyon.
+            </p>
+
+            <p>
+                And honestly, I wouldn't trade what we have
+                for anything. ❤️
+            </p>
+
+        </div>
+
+
+        <!-- =====================
+             7 PHOTO POLAROID GALLERY
+        ====================== -->
+
+        <section class="memory-section">
+
+            <h2>
+                Our Little Memories ❤️
+            </h2>
+
+            <p class="memory-subtitle">
+                A few of my favorite moments with you. 🥹💕
+            </p>
+
+
+            <div class="polaroid-gallery">
+
+
+                <!-- PHOTO 1 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo1.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        My favorite person ❤️
+                    </p>
+
+                </div>
+
+
+                <!-- PHOTO 2 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo2.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        Us being us 🥹
+                    </p>
+
+                </div>
+
+
+                <!-- PHOTO 3 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo3.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        One of my favorite memories 💕
+                    </p>
+
+                </div>
+
+
+                <!-- PHOTO 4 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo4.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        Another memory with you ❤️
+                    </p>
+
+                </div>
+
+
+                <!-- PHOTO 5 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo5.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        Always you. 🫶
+                    </p>
+
+                </div>
+
+
+                <!-- PHOTO 6 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo6.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        Two years of us 💗
+                    </p>
+
+                </div>
+
+
+                <!-- PHOTO 7 -->
+
+                <div class="polaroid">
+
+                    <img
+                        src="./photo7.jpg"
+                        alt="Our memory"
+                    >
+
+                    <p>
+                        And many more to come... ❤️
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             LETTER
+        ====================== -->
+
+        <div class="letter">
+
+            <h2>
+                A Little Letter For You 💌
+            </h2>
+
+            <p>
+                Hanna,
+            </p>
+
+            <p>
+                I don't always know how to say everything
+                I feel, but I hope you know how important
+                you are to me.
+            </p>
+
+            <p>
+                You've become such a big part of my life.
+                You're the person I want to tell my random
+                stories to, the person I want to laugh with,
+                and the person I want beside me when things
+                aren't going the way we planned.
+            </p>
+
+            <p>
+                I love our random conversations, our jokes,
+                our tampuhan, and even our wild jokes na
+                parang kasal na tayo bukas. HAHAHAHA. 😂❤️
+            </p>
+
+            <p>
+                But seriously, I love you so much, Hanna.
+                Thank you for being you and thank you for
+                being part of my life.
+            </p>
+
+            <p>
+                And if I could choose again,
+                I'd still choose you. ❤️
+            </p>
+
+            <p>
+                Always.
+            </p>
+
+            <p>
+                Love,<br>
+                Your Lhian 🫶
+            </p>
+
+        </div>
+
+
+        <!-- =====================
+             FUNNY SECTION
+        ====================== -->
+
+        <div class="funny">
+
+            <h2>
+                And Of Course... 😂❤️
+            </h2>
+
+            <p>
+                Two years together means you've officially
+                survived me for 730+ days.
+            </p>
+
+            <p>
+                Honestly, I don't know how you did it. HAHAHAHA. 😂
+            </p>
+
+            <p>
+                But congratulations, baby...
+                you're stuck with me. ❤️
+            </p>
+
+        </div>
+
+
+        <!-- =====================
+             ENDING
+        ====================== -->
+
+        <div class="ending">
+
+            <h2>
+                I Love You So Much, Hanna. ❤️
+            </h2>
+
+            <p>
+                Happy 2nd Anniversary to us. 🥹
+            </p>
+
+            <p>
+                Thank you for every memory,
+                every laugh, every conversation,
+                and every moment we've shared.
+            </p>
+
+            <p>
+                Here's to us and all the days of love
+                that are still waiting for us. ❤️
+            </p>
+
+
+            <br>
+
+
+            <button onclick="showFinalMessage()">
+                One Last Thing... 💗
+            </button>
+
+
+            <!-- FINAL SURPRISE -->
+
+            <div id="finalMessage">
+
+                <h2>
+                    It's still you, Hanna. ❤️
+                </h2>
+
+                <p>
+                    If I had to choose all over again,
+                    in every lifetime and every version
+                    of our story...
+                </p>
+
+                <p>
+                    I'd still choose you.
+                </p>
+
+                <p>
+                    Happy 2nd Anniversary, Baby. 🥹❤️
+                </p>
+
+                <p>
+                    ILYSM. Always your Lhian. 🫶
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</div>
+
+
+<script>
+
+/* =========================
+   OPEN ANNIVERSARY MESSAGE
+========================= */
+
+function openMessage() {
+
+    const message = document.getElementById("message");
+
+    message.style.display = "block";
+
+    setTimeout(function() {
+
+        message.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 100);
+
+}
+
+
+/* =========================
+   FINAL SURPRISE
+========================= */
+
+function showFinalMessage() {
+
+    const finalMessage =
+        document.getElementById("finalMessage");
+
+    finalMessage.style.display = "block";
+
+    setTimeout(function() {
+
+        finalMessage.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 100);
+
+}
+
+</script>
+
+</body>
+
+</html>
